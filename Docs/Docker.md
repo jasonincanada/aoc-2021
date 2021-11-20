@@ -15,5 +15,4 @@ aoc2021      latest    b0d8681c9378   33 minutes ago   187MB
 # run a temp container with it
 $ docker run --rm aoc2021
 Part 1: 138379
-Part 1: 138379
 ```

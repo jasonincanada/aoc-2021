@@ -1,19 +1,16 @@
 ﻿using AdventOfCode;
+using AdventOfCode.FSharp;
+using Microsoft.FSharp.Collections;
 
 // Parsing
 List<int> numbers = Common.GetInput(1)
     .Select(int.Parse)
     .ToList();
 
-// Solve day 1, part 1 from last year (2020)
-foreach (var m in numbers)
-{
-    foreach (var n in numbers)
-    {
-        if (m + n == 2020)
-        {
-            Console.WriteLine("Part 1: {0}", m * n);
-        }
-    }
-}
+// Convert to an F# list
+FSharpList<int> input = ListModule.OfSeq(numbers);
 
+// Process day 1
+FSharpList<int> result = Day01.doCase(input);
+
+Console.WriteLine("Part 1: {0}", result.First());
