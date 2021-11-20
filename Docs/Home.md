@@ -17,11 +17,16 @@ This is the [Obsidian](https://obsidian.md/) vault for my [Advent of Code 2021](
 
 
 ## Ideas
-
 - Develop/test locally but use an actual serverless compute resource deployed to the cloud to get the final solution
 - Dig into billing components and try to quantify cost in some organized way
 
-Find a use for:
+## Todo
 
-- Docker containers?
-
+- [x] Dockerize it
+- [ ] Reporting the answer
+	- [x] Write to stdout via CLI app
+	- [ ] Write to App Insights and inspect with Azure Portal
+	- [ ] Write to table
+- [x] Solution with C# project
+- [ ] Add F# project
+- [ ] 6:00am daily task in the cloud to pull my input from the site to some store
