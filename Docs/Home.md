@@ -28,5 +28,5 @@ This is the [Obsidian](https://obsidian.md/) vault for my [Advent of Code 2021](
 	- [ ] Write to App Insights and inspect with Azure Portal
 	- [ ] Write to table
 - [x] Solution with C# project
-- [ ] Add F# project
+- [x] Add F# project
 - [ ] 6:00am daily task in the cloud to pull my input from the site to some store
