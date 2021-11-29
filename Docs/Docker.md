@@ -3,7 +3,7 @@
 $ git clone https://github.com/jasonincanada/aoc-2021.git
 
 # build and name the docker image
-$ cd AdventOfCode
+$ cd aoc-2021/AdventOfCode
 $ docker build -t aoc2021 .
 # ...
 
