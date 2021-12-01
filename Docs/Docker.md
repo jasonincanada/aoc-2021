@@ -10,9 +10,10 @@ $ docker build -t aoc2021 .
 # check for the new image
 $ docker image ls
 REPOSITORY   TAG       IMAGE ID       CREATED          SIZE
-aoc2021      latest    b0d8681c9378   33 minutes ago   187MB
+aoc2021      latest    40fa440fcc36   8 minutes ago    191MB
 
 # run a temp container with it
 $ docker run --rm aoc2021
-Part 1: 138379
+Part 1: 1696
+Part 2: 1737
 ```
