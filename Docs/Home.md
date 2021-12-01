@@ -7,7 +7,7 @@ This is the [Obsidian](https://obsidian.md/) vault for my [Advent of Code 2021](
 
 | Component      | Implementation                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------- |
-| Language       | C# for enviro/plumbing, F# for puzzle logic                                                                   |
+| Language       | C# with LINQ                                                                                                  | 
 | Store          | [Azure SQL Database](https://docs.microsoft.com/en-ca/azure/azure-sql/)                                       |
 | User Interface | [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)                                            |
 | Computation    | [Azure Functions](https://azure.microsoft.com/en-us/services/functions/)                                      |
