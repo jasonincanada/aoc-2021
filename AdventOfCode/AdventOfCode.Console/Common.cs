@@ -9,8 +9,8 @@
             // Try these folders for the input file
             List<string> folders = new()
             {
-                @"",
-                @"..\..\..\Inputs\",
+                @"",                     // if running in Docker
+                @"..\..\..\..\Inputs\",  // if running in Visual Studio
             };
 
             foreach (var folder in folders)
