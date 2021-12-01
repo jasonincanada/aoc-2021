@@ -4,13 +4,13 @@
     {
         public static List<string> GetInput(int day)
         {
-            string filename = $"Input{day}.txt";
+            string filename = $"Day{day}.txt";
 
             // Try these folders for the input file
             List<string> folders = new()
             {
                 @"",
-                @"..\..\..\",
+                @"..\..\..\Inputs\",
             };
 
             foreach (var folder in folders)

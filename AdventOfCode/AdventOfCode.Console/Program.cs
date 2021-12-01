@@ -1,16 +1,8 @@
 ﻿using AdventOfCode;
-using AdventOfCode.FSharp;
-using Microsoft.FSharp.Collections;
+using AdventOfCode.CSharp;
 
-// Parsing
-List<int> numbers = Common.GetInput(1)
-    .Select(int.Parse)
-    .ToList();
+var input = Common.GetInput(1);
+var day   = new Day01(input);
 
-// Convert to an F# list
-FSharpList<int> input = ListModule.OfSeq(numbers);
-
-// Process day 1
-FSharpList<int> result = Day01.doCase(input);
-
-Console.WriteLine("Part 1: {0}", result.First());
+Console.WriteLine("Part 1: {0}", day.Part1());
+Console.WriteLine("Part 2: {0}", day.Part2());
