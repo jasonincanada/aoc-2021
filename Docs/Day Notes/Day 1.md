@@ -19,3 +19,5 @@ Azure is still on the horizon but it's not necessary yet since I'm still figurin
 ## Areas for Improvement
 
 The algorithmic complexity $\mathcal{O}(n^2)$ of my solution is higher than it needs to be because it's re-doing a lot of enumerating and summing. There is surely a linear solution to this, and probably even one involving semirings, but this is good for today
+
+Update: Jocelyn Stricker found a clever optimization in [their video here](https://www.youtube.com/watch?v=sYWEf6QCNG0&t=372s)
