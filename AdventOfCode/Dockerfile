@@ -17,6 +17,6 @@ FROM mcr.microsoft.com/dotnet/runtime:6.0
 WORKDIR /app
 
 COPY --from=build /app .
-COPY Inputs/Day*.txt .
+COPY Inputs/Day*.txt ./
 
 ENTRYPOINT ["dotnet", "AdventOfCode.Console.dll"]
