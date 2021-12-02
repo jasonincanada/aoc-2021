@@ -62,9 +62,8 @@ public int Part2()
 		default:
 			throw new InvalidOperationException($"Unknown command {command}");
 	}
-}
 
-return horiz * depth;
+	return horiz * depth;
 }
 ```
 
