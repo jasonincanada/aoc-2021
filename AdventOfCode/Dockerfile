@@ -5,7 +5,6 @@ WORKDIR /aoc
 COPY AdventOfCode.sln .
 COPY AdventOfCode.Console/AdventOfCode.Console.csproj AdventOfCode.Console/AdventOfCode.Console.csproj
 COPY AdventOfCode.CSharp/AdventOfCode.CSharp.csproj AdventOfCode.CSharp/AdventOfCode.CSharp.csproj
-COPY AdventOfCode.FSharp/AdventOfCode.FSharp.fsproj AdventOfCode.FSharp/AdventOfCode.FSharp.fsproj
 COPY AdventOfCode.Tests/AdventOfCode.Tests.csproj AdventOfCode.Tests/AdventOfCode.Tests.csproj
 RUN dotnet restore
 
