@@ -23,5 +23,12 @@
 
             throw new Exception($"Couldn't locate input file {filename} for day {day}");
         }
+
+        public static List<string> GetSampleInput(string filename)
+        {
+            string file = $@"..\..\..\..\SampleInputs\Day{filename}.txt";
+
+            return File.ReadAllLines(file).ToList();
+        }
     }
 }
