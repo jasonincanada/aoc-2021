@@ -1,6 +1,6 @@
 ﻿namespace AdventOfCode.CSharp
 {
-    public class Day02
+    public class Day02 : IAdventDay
     {
         // the day's input is parsed in the constructor and kept around
         readonly IEnumerable<(string command, int amount)> _parsed;
