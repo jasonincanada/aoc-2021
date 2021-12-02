@@ -16,7 +16,7 @@
         }
 
         // "forward 5" -> ("forward", 5)
-        public static (string, int) StringWithNumber(string input)
+        internal static (string, int) StringWithNumber(string input)
         {
             var split = input.Split(' ');
 
