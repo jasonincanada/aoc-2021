@@ -7,13 +7,13 @@ This is the [Obsidian](https://obsidian.md/) vault for my [Advent of Code 2021](
 
 | Component      | Implementation                                                                                                |
 | -------------- | ------------------------------------------------------------------------------------------------------------- |
-| Language       | C# with LINQ                                                                                                  | 
+| Language       | C# with LINQ                                                                                                  |
 | Store          | [Azure SQL Database](https://docs.microsoft.com/en-ca/azure/azure-sql/)                                       |
 | User Interface | [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor)                                            |
 | Computation    | [Azure Functions](https://azure.microsoft.com/en-us/services/functions/)                                      |
 | Logging        | [App Insights](https://docs.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview)                |
 | Editor         | [Visual Studio 2022 Community](https://devblogs.microsoft.com/visualstudio/visual-studio-2022-now-available/) |
-| Testing        | [Moq](https://github.com/moq/moq4)                                                                            |
+| Testing        | [xUnit](https://xunit.net/) and [Moq](https://github.com/moq/moq4)                                            |
 
 
 ## Ideas
