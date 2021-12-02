@@ -9,5 +9,18 @@
 
             return integers;
         }
+                
+        public static IEnumerable<(string, int)> AllStringWithNumber(IEnumerable<string> input)
+        {
+            return input.Select(StringWithNumber);
+        }
+
+        // "forward 5" -> ("forward", 5)
+        static (string, int) StringWithNumber(string input)
+        {
+            var split = input.Split(' ');
+
+            return (split[0], int.Parse(split[1]));
+        }
     }
 }
