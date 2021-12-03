@@ -5,11 +5,15 @@ WORKDIR /aoc
 COPY AdventOfCode.sln .
 COPY AdventOfCode.Console/AdventOfCode.Console.csproj AdventOfCode.Console/AdventOfCode.Console.csproj
 COPY AdventOfCode.CSharp/AdventOfCode.CSharp.csproj AdventOfCode.CSharp/AdventOfCode.CSharp.csproj
-COPY AdventOfCode.Tests/AdventOfCode.Tests.csproj AdventOfCode.Tests/AdventOfCode.Tests.csproj
+
+# remove the tests project for now and restore the other two
+RUN dotnet sln remove AdventOfCode.Tests/AdventOfCode.Tests.csproj
 RUN dotnet restore
 
-# copy the rest of the source over
-COPY . .
+# copy the source over
+COPY AdventOfCode.Console AdventOfCode.Console/
+COPY AdventOfCode.CSharp  AdventOfCode.CSharp/
+
 RUN dotnet publish -c release -o /app
 
 # final image
