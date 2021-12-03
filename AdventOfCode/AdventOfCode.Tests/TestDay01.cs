@@ -5,24 +5,41 @@ namespace AdventOfCode.Tests
 {
     public class TestDay01
     {
-        [Fact]
-        public void TestSampleInput()
+        IAdventDay GetSampleInput(string fileId)
         {
-            var input = Common.GetSampleInput("1");
-            var day = new Day01(input);
+            var input = Common.GetSampleInput(fileId);
+            return new Day01(input);
+        }
 
-            Assert.Equal(7, day.Part1());
-            Assert.Equal(5, day.Part2());
+        IAdventDay GetMyInput(int fileId)
+        {
+            var input = Common.GetInput(fileId);
+            return new Day01(input);
+        }
+
+
+        [Fact]
+        public void TestSamplePart1()
+        {
+            Assert.Equal(7, GetSampleInput("1").Part1());
         }
 
         [Fact]
-        public void TestMyInput()
+        public void TestSamplePart2()
         {
-            var input = Common.GetInput(1);
-            var day = new Day01(input);
+            Assert.Equal(5, GetSampleInput("1").Part2());
+        }
 
-            Assert.Equal(1696, day.Part1());
-            Assert.Equal(1737, day.Part2());
+        [Fact]
+        public void TestPart1()
+        {
+            Assert.Equal(1696, GetMyInput(1).Part1());
+        }
+
+        [Fact]
+        public void TestPart2()
+        {
+            Assert.Equal(1737, GetMyInput(1).Part2());
         }
     }
 }
