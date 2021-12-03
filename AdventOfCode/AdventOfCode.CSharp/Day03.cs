@@ -17,7 +17,7 @@
         public Day03(IEnumerable<string> input)
         {
             _bitstrings = input
-                .Select(x => x.Select(CharToInt).ToList())
+                .Select(line => line.Select(CharToInt).ToList())
                 .ToList();
 
             // all bitstrings are the same length so measure the first one
@@ -80,9 +80,9 @@
 
                 // whittle down the pile
                 if (sum >= 0)
-                    pile = pile.Where(c => c[i] == positive).ToList();
+                    pile = pile.Where(bits => bits[i] == positive).ToList();
                 else
-                    pile = pile.Where(c => c[i] == negative).ToList();
+                    pile = pile.Where(bits => bits[i] == negative).ToList();
 
                 // per the problem description, we can bail as soon as we have one bitstring left
                 if (pile.Count() == 1)
