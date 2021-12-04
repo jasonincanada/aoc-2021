@@ -29,4 +29,6 @@ This is the [Obsidian](https://obsidian.md/) vault for my [Advent of Code 2021](
 	- [ ] Write to table
 - [x] Solution with C# project
 - [x] Add F# project
+- [x] Remove F# project
 - [ ] 6:00am daily task in the cloud to pull my input from the site to some store
+- [ ] Don't copy inputs to docker image, mount local folders instead
