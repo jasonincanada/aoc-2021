@@ -78,8 +78,8 @@
         public int SumUndabbed()
         {
             return _squares
-                .Where(c => !c.IsDabbed)
-                .Select(c => c.Number)
+                .Where(s => !s.IsDabbed)
+                .Select(s => s.Number)
                 .Sum();
         }
     }
