@@ -28,20 +28,16 @@
 
         public void Dab(int number)
         {
-            for (int i = 0; i < _cells.Count; i++)
-            {
-                Cell cell = _cells[i];
+            // Find the cell with this number and dab it, or return if not found
+            int index = _cells.IndexOfCond(c => c.Number == number);
 
-                if (cell.Number == number)
-                {
-                    cell.IsDabbed = true;
+            if (index < 0)
+                return;
 
-                    // with a new cell dabbed, check its column/row to see if the card is a winner
-                    CheckForWin(i);
-                                        
-                    break;
-                }
-            }            
+            _cells[index].IsDabbed = true;
+
+            // with a new cell dabbed, check its column/row to see if the card is a winner
+            CheckForWin(index);
         }
 
         /// <summary>
