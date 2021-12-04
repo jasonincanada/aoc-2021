@@ -31,15 +31,15 @@
         /// </summary>
         public void Dab(int number)
         {            
-            int index = _squares.IndexWhere(c => c.Number == number);
+            int i = _squares.IndexWhere(c => c.Number == number);
 
-            if (index < 0)
+            if (i < 0)
                 return;
 
-            _squares[index].IsDabbed = true;
+            _squares[i].IsDabbed = true;
 
             // with a new square dabbed, check its column/row to see if the card is a winner
-            CheckForWin(index);
+            CheckForWin(i);
         }
 
         /// <summary>
