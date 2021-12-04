@@ -74,7 +74,6 @@
         /// <summary>
         /// The result is computed using the sum of the undabbed squares
         /// </summary>
-        /// <returns></returns>
         public int SumUndabbed()
         {
             return _squares
