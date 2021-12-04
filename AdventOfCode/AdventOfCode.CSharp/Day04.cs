@@ -31,7 +31,7 @@
         /// </summary>
         public void Dab(int number)
         {            
-            int index = _squares.IndexOfCond(c => c.Number == number);
+            int index = _squares.IndexWhere(c => c.Number == number);
 
             if (index < 0)
                 return;

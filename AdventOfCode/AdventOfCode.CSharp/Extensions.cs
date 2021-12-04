@@ -10,7 +10,7 @@
         /// <param name="items">The IEnumerable&lt;T&gt; to enumerate</param>
         /// <param name="condition"></param>
         /// <returns>The 0-based index of the first element that satisfies the condition, or -1 if no element does</returns>
-        public static int IndexOfCond<T>(this IEnumerable<T> items, Func<T, bool> condition)
+        public static int IndexWhere<T>(this IEnumerable<T> items, Func<T, bool> condition)
         {
             int index = 0;
 
