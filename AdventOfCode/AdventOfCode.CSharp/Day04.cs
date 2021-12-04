@@ -8,7 +8,10 @@
         /// </summary>
         List<Square> _squares;
 
-        public bool IsWinner { get; private set; }
+        /// <summary>
+        /// Set to true in CheckForWin() if the latest dab completes a row or column
+        /// </summary>
+        public bool IsWinner { get; private set; } = false;
 
         public BingoCard(IEnumerable<string> rows)
         {
