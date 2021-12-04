@@ -5,6 +5,7 @@ List<IAdventDay> days = new() {
     new Day01(Common.GetInput(1)),
     new Day02(Common.GetInput(2)),
     new Day03(Common.GetInput(3)),
+    new Day04(Common.GetInput(4)),
 };
 
 for (int day = 0; day < days.Count; day++)

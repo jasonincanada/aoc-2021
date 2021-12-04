@@ -22,5 +22,25 @@
 
             return (split[0], int.Parse(split[1]));
         }
+
+        // space-separated list of ints
+        public static IEnumerable<int> NumbersWithSpaces(string input)
+        {
+            return NumbersWith(input, ' ');
+        }
+
+        // comma-separated list of ints
+        public static IEnumerable<int> NumbersWithCommas(string input)
+        {
+            return NumbersWith(input, ',');
+        }
+
+        private static IEnumerable<int> NumbersWith(string input, char separator)
+        {
+            return input
+                .Split(separator)
+                .Where(s => s != string.Empty)    // Day 4 has spaces between numbers, skip them
+                .Select(int.Parse);
+        }
     }
 }
