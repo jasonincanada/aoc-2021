@@ -3,10 +3,10 @@
     class BingoCard
     {
         /// <summary>
-        /// The 25 cells of the bingo card with their dabbed status. Instead of a two-dimensional
-        /// array we keep one line of cells and do index math to check if a column is fully dabbed
+        /// The 25 squares of the bingo card with their dabbed status. Instead of a two-dimensional
+        /// array we keep one line of squares and do index math to check if a column is fully dabbed
         /// </summary>
-        List<Cell> _cells;
+        List<Square> _squares;
 
         public bool IsWinner { get; private set; }
 
@@ -19,31 +19,31 @@
              *    1 12 20 15 19
              */
 
-            _cells = rows
+            _squares = rows
                 .Take(5)
                 .SelectMany(Parsing.NumbersWithSpaces)
-                .Select(number => new Cell(number))
+                .Select(number => new Square(number))
                 .ToList();
         }
 
         public void Dab(int number)
         {
-            // Find the cell with this number and dab it, or return if not found
-            int index = _cells.IndexOfCond(c => c.Number == number);
+            // Find the square with this number and dab it, or return if not found
+            int index = _squares.IndexOfCond(c => c.Number == number);
 
             if (index < 0)
                 return;
 
-            _cells[index].IsDabbed = true;
+            _squares[index].IsDabbed = true;
 
-            // with a new cell dabbed, check its column/row to see if the card is a winner
+            // with a new square dabbed, check its column/row to see if the card is a winner
             CheckForWin(index);
         }
 
         /// <summary>
-        /// Check the row and/or column of a given cell to see if all cells are dabbed
+        /// Check the row and/or column of a given square to see if all squares are dabbed
         /// </summary>
-        /// <param name="index">Zero-based index into the _cells list</param>
+        /// <param name="index">Zero-based index into the _squares list</param>
         void CheckForWin(int index)
         {
             IEnumerable<int> rows = Enumerable
@@ -54,8 +54,8 @@
                 .Select(i => i * 5 + index)    // eg: 14, 19, 24, 29, 34
                 .Select(i => i % 25);          //     14, 19, 24, 4,  9
 
-            if (    rows.All(i => _cells[i].IsDabbed)
-                 || cols.All(i => _cells[i].IsDabbed))
+            if (    rows.All(i => _squares[i].IsDabbed)
+                 || cols.All(i => _squares[i].IsDabbed))
             {
                 IsWinner = true;
             }
@@ -70,21 +70,21 @@
         }
 
         /// <summary>
-        /// The result is computed using the sum of the undabbed cells
+        /// The result is computed using the sum of the undabbed squares
         /// </summary>
         /// <returns></returns>
         public int SumUndabbed()
         {
-            return _cells
+            return _squares
                 .Where(c => !c.IsDabbed)
                 .Select(c => c.Number)
                 .Sum();
         }
     }
 
-    class Cell
+    class Square
     {
-        public Cell(int number)
+        public Square(int number)
         {
             Number = number;
             IsDabbed = false;
