@@ -106,6 +106,7 @@
 
         public Day04(IEnumerable<string> input)
         {
+            // the first row of the input is a list of numbers separated by commas
             _numbersCalled = input
                 .Select(Parsing.NumbersWithCommas)
                 .First()
@@ -113,11 +114,11 @@
 
             var rows = input.Skip(2);
 
+            // followed by n bingo cards, each with 5 rows, separated by a blank line
             while (rows.Count() > 0)
             {
                 _bingoCards.Add(new BingoCard(rows));
 
-                // skip the 5 card rows and a blank line after them if there
                 rows = rows.Skip(5 + 1);
             }
         }
