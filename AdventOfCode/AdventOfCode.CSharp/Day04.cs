@@ -26,9 +26,11 @@
                 .ToList();
         }
 
+        /// <summary>
+        /// If the card has this number, dab it and check to see if we've won
+        /// </summary>
         public void Dab(int number)
-        {
-            // Find the square with this number and dab it, or return if not found
+        {            
             int index = _squares.IndexOfCond(c => c.Number == number);
 
             if (index < 0)
