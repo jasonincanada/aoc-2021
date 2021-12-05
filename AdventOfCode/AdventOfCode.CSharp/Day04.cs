@@ -102,7 +102,7 @@
     public class Day04 : IAdventDay
     {
         readonly List<int> _numbersCalled;
-        readonly List<BingoCard> _bingoCards = new List<BingoCard>();
+        readonly List<BingoCard> _bingoCards = new();
 
         public Day04(IEnumerable<string> input)
         {
