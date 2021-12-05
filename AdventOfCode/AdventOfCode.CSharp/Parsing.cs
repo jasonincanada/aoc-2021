@@ -38,8 +38,7 @@
         private static IEnumerable<int> NumbersWith(string input, char separator)
         {
             return input
-                .Split(separator)
-                .Where(s => s != string.Empty)    // Day 4 has spaces between numbers, skip them
+                .Split(separator, StringSplitOptions.RemoveEmptyEntries)
                 .Select(int.Parse);
         }
     }
