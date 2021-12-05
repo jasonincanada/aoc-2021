@@ -115,7 +115,7 @@
             var rows = input.Skip(2);
 
             // followed by n bingo cards, each with 5 rows, separated by a blank line
-            while (rows.Count() > 0)
+            while (rows.Any())
             {
                 _bingoCards.Add(new BingoCard(rows));
 
