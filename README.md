@@ -6,6 +6,7 @@ Visit the Advent of Code sub-reddit for discussions and other participants' code
 
 | Day | Title                                                               | Description                             |
 | --- | ------------------------------------------------------------------- | --------------------------------------- |
+| 6   | [Lanternfish](./AdventOfCode/AdventOfCode.CSharp/Day06.cs)          | Evolve a school of lanternfish          |
 | 5   | [Hydrothermal Venture](./AdventOfCode/AdventOfCode.CSharp/Day05.cs) | Count line overlaps                     |
 | 4   | [Giant Squid](./AdventOfCode/AdventOfCode.CSharp/Day04.cs)          | Play bingo against a giant squid        |
 | 3   | [Binary Diagnostic](./AdventOfCode/AdventOfCode.CSharp/Day03.cs)    | Generate a diagnostic report on the sub |
