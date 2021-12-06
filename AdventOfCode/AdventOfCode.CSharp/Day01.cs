@@ -14,14 +14,14 @@
             _parsed = Parsing.AllNumbers(input);            
         }
         
-        public int Part1()
+        public long Part1()
         {
             int result = CountIncreasing(_parsed, windowSize: 1);
 
             return result;
         }
 
-        public int Part2()
+        public long Part2()
         {
             int result = CountIncreasing(_parsed, WindowSize);
 

@@ -124,8 +124,8 @@
         }
 
 
-        public int Part1() => PlayBingo(lastCardToWin: false);
-        public int Part2() => PlayBingo(lastCardToWin: true);
+        public long Part1() => PlayBingo(lastCardToWin: false);
+        public long Part2() => PlayBingo(lastCardToWin: true);
 
         int PlayBingo(bool lastCardToWin)
         {

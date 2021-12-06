@@ -10,12 +10,12 @@
             _parsed = Parsing.AllStringWithNumber(input);
         }
 
-        public int Part1()
+        public long Part1()
         {
             return PilotSub(1);
         }
 
-        public int Part2()
+        public long Part2()
         {
             return PilotSub(2);
         }

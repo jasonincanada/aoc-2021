@@ -32,7 +32,7 @@
         };
 
 
-        public int Part1()
+        public long Part1()
         {
             int gamma = 0;
             int epsilon = 0;
@@ -54,7 +54,7 @@
         }
 
                
-        public int Part2()
+        public long Part2()
         {
             // the oxygen and carbon computations differ only in the filtering bit being 1 or -1
             int oxygen = FromBits(FilterPile(1, -1));

@@ -59,8 +59,8 @@ namespace AdventOfCode.CSharp
                 .ToList();
         }
 
-        public int Part1() => CountOverlapsOver(2, diagonals: false);
-        public int Part2() => CountOverlapsOver(2, diagonals: true);
+        public long Part1() => CountOverlapsOver(2, diagonals: false);
+        public long Part2() => CountOverlapsOver(2, diagonals: true);
 
         int CountOverlapsOver(int threshold, bool diagonals)
         {
