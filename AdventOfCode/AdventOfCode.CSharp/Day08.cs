@@ -75,7 +75,7 @@ namespace AdventOfCode.CSharp
             FoundDigit(9, nine);
                         
             // next, find the 5.  this is the only five-segment digit that has both segments
-            // introduced from the transition from 7 -> 4 (the elbow)
+            // introduced from the transition from 1 -> 4 (the elbow)
             string five = Patterns
                 .Where(p => p.Length == 5)
                 .Where(p => p.HasAll(elbow))
