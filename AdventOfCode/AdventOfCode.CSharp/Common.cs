@@ -30,5 +30,20 @@
 
             return File.ReadAllLines(file).ToList();
         }
+
+        /// <summary>
+        /// Sorts a string in character order. Found at https://www.dotnetperls.com/alphabetize-string
+        /// </summary>
+        public static string Alphabetize(string s)
+        {
+            // Convert to char array.
+            char[] a = s.ToCharArray();
+
+            // Sort letters.
+            Array.Sort(a);
+
+            // Return modified string.
+            return new string(a);
+        }
     }
 }
