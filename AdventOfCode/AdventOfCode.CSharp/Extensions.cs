@@ -24,5 +24,17 @@
 
             return -1;
         }
+
+        /// <summary>
+        /// Return true if every needle is found somewhere in this haystack
+        /// </summary>
+        /// <param name="haystack"></param>
+        /// <param name="needles"></param>
+        /// <returns></returns>
+        public static bool HasAll(this string haystack, char[] needles)
+        {
+            char[] chars = haystack.ToCharArray();
+            return needles.All(n => chars.Contains(n));
+        }
     }
 }

@@ -6,6 +6,7 @@ Visit the Advent of Code sub-reddit for discussions and other participants' code
 
 | Day | Title                                                                  | Description                             |
 | --- | ---------------------------------------------------------------------- | --------------------------------------- |
+| 8   | [Seven Segment Search](./AdventOfCode/AdventOfCode.CSharp/Day08.cs)    | Deduce how a digital display is wired   |
 | 7   | [The Treachery of Whales](./AdventOfCode/AdventOfCode.CSharp/Day07.cs) | Move a fleet of crab subs around        |
 | 6   | [Lanternfish](./AdventOfCode/AdventOfCode.CSharp/Day06.cs)             | Evolve a school of lanternfish          |
 | 5   | [Hydrothermal Venture](./AdventOfCode/AdventOfCode.CSharp/Day05.cs)    | Count line overlaps                     |
