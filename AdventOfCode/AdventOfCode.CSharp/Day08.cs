@@ -45,7 +45,7 @@ namespace AdventOfCode.CSharp
         /// </summary>
         public void DeduceDigits()
         {
-            // these ones are "freebies" since their length gives away the digit they represent
+            // these ones are "freebies" since their segment count gives away the digit they represent
             string one   = GetThe2SegmentPattern();
             string seven = GetThe3SegmentPattern();
             string four  = GetThe4SegmentPattern();
