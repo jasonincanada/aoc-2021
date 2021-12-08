@@ -36,5 +36,19 @@
             char[] chars = haystack.ToCharArray();
             return needles.All(n => chars.Contains(n));
         }
+
+        /// <summary>
+        /// Expect only one element in this IEnumerable&lt;<typeparamref name="T"/>&gt; and pass
+        /// the element back if so. If there are no elements or more than one, throw an exception
+        /// </summary>
+        /// <returns>The element in this IEnumerable&lt;<typeparamref name="T"/>&gt;</returns>
+        /// <exception cref="Exception">Thrown if element count is other than 1</exception>
+        public static T Only<T>(this IEnumerable<T> ts)
+        {
+            if (ts.Count() != 1)
+                throw new Exception($"Only() expects a single value in the IEnumerable but found {ts.Count()}");
+
+            return ts.First();
+        }
     }
 }

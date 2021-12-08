@@ -70,7 +70,7 @@ namespace AdventOfCode.CSharp
             string nine = Patterns
                 .Where(p => p.Length == 6)
                 .Where(p => p.HasAll(fourseven))
-                .First();
+                .Only();
 
             FoundDigit(9, nine);
                         
@@ -79,14 +79,14 @@ namespace AdventOfCode.CSharp
             string five = Patterns
                 .Where(p => p.Length == 5)
                 .Where(p => p.HasAll(elbow))
-                .First();
+                .Only();
 
             FoundDigit(5, five);
 
             // the 5 is not the 3, but differs from it by only one segment
             string three = Patterns
                 .Where(p => OneSegmentDifferent(five, p))
-                .First();
+                .Only();
 
             FoundDigit(3, three);
 
@@ -96,7 +96,7 @@ namespace AdventOfCode.CSharp
             string two = Patterns
                 .Where(p => p.Length == 5)
                 .Where(p => p != three && p != five)
-                .First();
+                .Only();
 
             FoundDigit(2, two);
 
@@ -109,13 +109,13 @@ namespace AdventOfCode.CSharp
             // the middle segment. it's just the elbow without the top-left segment
             char middle = elbow
                 .Where(s => s != topleft)
-                .First();
+                .Only();
 
             // 0 is the only six-segment digit without the middle segment
             string zero = Patterns
                 .Where(p => p.Length == 6)
                 .Where(p => !p.Contains(middle))
-                .First();
+                .Only();
 
             FoundDigit(0, zero);
 
@@ -123,7 +123,7 @@ namespace AdventOfCode.CSharp
             string six = Patterns
                 .Where(p => p.Length == 6)
                 .Where(p => !p.Contains(topright))
-                .First();
+                .Only();
 
             FoundDigit(6, six);
         }
@@ -161,10 +161,10 @@ namespace AdventOfCode.CSharp
         }
 
         // we get four digits for free because their segment counts are unique
-        string GetThe2SegmentPattern() => PatternsOfLength(2).First();
-        string GetThe3SegmentPattern() => PatternsOfLength(3).First();
-        string GetThe4SegmentPattern() => PatternsOfLength(4).First();
-        string GetThe7SegmentPattern() => PatternsOfLength(7).First();
+        string GetThe2SegmentPattern() => PatternsOfLength(2).Only();
+        string GetThe3SegmentPattern() => PatternsOfLength(3).Only();
+        string GetThe4SegmentPattern() => PatternsOfLength(4).Only();
+        string GetThe7SegmentPattern() => PatternsOfLength(7).Only();
 
         List<string> PatternsOfLength(int length)
         {
@@ -232,7 +232,7 @@ namespace AdventOfCode.CSharp
                     int idx = note
                         .Digits
                         .Where(i => note.Patterns[i] == output)
-                        .First();
+                        .Only();
 
                     count += note.Digits[idx] * multiplier;
                     multiplier /= 10;
