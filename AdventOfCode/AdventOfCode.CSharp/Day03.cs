@@ -28,7 +28,7 @@
         {
             '0' => -1,
             '1' => 1,
-             _  => throw new ArgumentOutOfRangeException()
+             _  => throw new ArgumentOutOfRangeException(bit.ToString())
         };
 
 
@@ -85,7 +85,7 @@
                     pile = pile.Where(bits => bits[i] == negative).ToList();
 
                 // per the problem description, we can bail as soon as we have one bitstring left
-                if (pile.Count() == 1)
+                if (pile.Count == 1)
                     break;
             }
 

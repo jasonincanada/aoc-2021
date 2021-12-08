@@ -32,7 +32,7 @@ namespace AdventOfCode.CSharp
                 fishCounts = fishCounts.Skip(1).ToList();
 
                 // should now only have data for lifespans 0..7
-                Debug.Assert(fishCounts.Count() == 7+1);
+                Debug.Assert(fishCounts.Count == 7+1);
 
                 // all the fish that rolled off the front get added again with 6 days left
                 fishCounts[6] += spawning;
