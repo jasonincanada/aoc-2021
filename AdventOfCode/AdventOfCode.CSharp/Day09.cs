@@ -7,17 +7,7 @@
     /// miss that it's looking at two different objects that represent the same coordinate. The
     /// point of C# record types is to do this more intuitive value comparison automatically
     /// </summary>
-    public record Coord
-    {
-        public int Row { get; private set; }
-        public int Col { get; private set; }
-
-        public Coord(int row, int col)
-        {
-            Row = row;
-            Col = col;
-        }
-    }
+    public record Coord(int Row, int Col);
 
     public class Day09 : IAdventDay
     {
