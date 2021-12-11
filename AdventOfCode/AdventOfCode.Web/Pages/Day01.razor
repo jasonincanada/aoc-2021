@@ -1,0 +1,43 @@
+﻿@page "/day1"
+@using AdventOfCode.Web.Data
+@using AdventOfCode.CSharp
+
+<PageTitle>Day 1</PageTitle>
+
+<h2>Day 1</h2>
+
+<div class="container">
+    <EditForm Model="@puzzleDay" >
+        <DataAnnotationsValidator />
+
+        <p>
+            <label>
+                Input: <InputTextArea @bind-Value="@puzzleDay.Input" rows="4" cols="30"></InputTextArea>
+            </label>
+        </p>
+
+        <p><label>Part 1: <InputText @bind-Value="@puzzleDay.Part1" readonly="true" /></label></p>
+        <p><label>Part 2: <InputText @bind-Value="@puzzleDay.Part2" readonly="true" /></label></p>
+
+        <button type="submit" class="btn btn-primary" @onclick="DoPart1">Get solution</button>
+        
+    </EditForm>
+</div>
+
+@code {
+    PuzzleDay puzzleDay = new();
+
+    public void DoPart1()
+    {
+        CSharp.Day01 day01 = new CSharp.Day01(GetInput());
+
+        puzzleDay.Part1 = day01.Part1().ToString();
+        puzzleDay.Part2 = day01.Part2().ToString();
+    }
+
+    IEnumerable<string> GetInput()
+    {
+        return puzzleDay.Input.Split('\n');
+    }
+
+}

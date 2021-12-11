@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\AdventOfCode.CSharp\AdventOfCode.CSharp.csproj" />
+  </ItemGroup>
+
 </Project>
