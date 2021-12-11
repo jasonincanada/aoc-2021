@@ -17,7 +17,7 @@
         /// <summary>
         /// Keep one line of octos instead of a 2D-array and use index math to emulate a grid
         /// </summary>
-        List<Octo> _octos;
+        readonly List<Octo> _octos;
 
         /// <summary>
         /// Width of the cavern (one row of octos)
@@ -140,7 +140,7 @@
 
     public class Day11 : IAdventDay
     {
-        IEnumerable<string> _input;               
+        readonly IEnumerable<string> _input;               
 
         public Day11(IEnumerable<string> input)
         {
