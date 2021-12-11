@@ -6,8 +6,9 @@ COPY AdventOfCode.sln .
 COPY AdventOfCode.Console/AdventOfCode.Console.csproj AdventOfCode.Console/AdventOfCode.Console.csproj
 COPY AdventOfCode.CSharp/AdventOfCode.CSharp.csproj AdventOfCode.CSharp/AdventOfCode.CSharp.csproj
 
-# remove the tests project for now and restore the other two
+# remove the tests/web projects and restore the other two
 RUN dotnet sln remove AdventOfCode.Tests/AdventOfCode.Tests.csproj
+RUN dotnet sln remove AdventOfCode.Web/AdventOfCode.Web.csproj
 RUN dotnet restore
 
 # copy the source over
