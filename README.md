@@ -6,6 +6,7 @@ Visit the Advent of Code sub-reddit for discussions and other participants' code
 
 | Day | Title                                                                  | Description                                  |
 | --- | ---------------------------------------------------------------------- | -------------------------------------------- |
+| 11  | [Dumbo Octopus](./AdventOfCode/AdventOfCode.CSharp/Day11.cs)           | Energize a cavern of octopuses               |
 | 10  | [Syntax Scoring](./AdventOfCode/AdventOfCode.CSharp/Day10.cs)          | Analyse nested brackets and report errors    |
 | 9   | [Smoke Basin](./AdventOfCode/AdventOfCode.CSharp/Day09.cs)             | Flood-fill a terrain and measure basin sizes |
 | 8   | [Seven Segment Search](./AdventOfCode/AdventOfCode.CSharp/Day08.cs)    | Deduce how a digital display is wired        |
