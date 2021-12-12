@@ -137,16 +137,7 @@
 
         public Day12(IEnumerable<string> input) { _input = input; }
 
-        public long Part1()
-        {
-            var caves = new CaveSystem(_input, 1);
-            return caves.CountPaths();
-        }
-
-        public long Part2()
-        {
-            var caves = new CaveSystem(_input, 2);
-            return caves.CountPaths();
-        }
+        public long Part1() => new CaveSystem(_input, 1).CountPaths();
+        public long Part2() => new CaveSystem(_input, 2).CountPaths();
     }
 }
