@@ -120,10 +120,10 @@
                 // having returned from an arbitrarily long path, we have to undo the effects
                 // of the path-taking by forgetting the visited status of any cave that we
                 // visited after this older call of SearchFrom that we're now back in
-                foreach (var visits in _pastVisits)
+                foreach (var k in _pastVisits.Keys)
                 {
                     // keep only this and prior step counts
-                    _pastVisits[visits.Key] = visits.Value
+                    _pastVisits[k] = _pastVisits[k]
                         .Where(s => s <= steps)
                         .ToList();
                 }
