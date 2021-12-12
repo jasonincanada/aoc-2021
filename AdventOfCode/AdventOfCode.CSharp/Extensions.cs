@@ -69,10 +69,10 @@
         /// Add a value to a dictionary of lists, only if the value is distinct within the
         /// list, creating a new singleton list at this key if the key is new
         /// </summary>
-        public static void AddToListUnique(this IDictionary<string, List<string>> dict, string key, string value)
+        public static void AddToListUnique<T, U>(this IDictionary<T, List<U>> dict, T key, U value)
         {
             if (!dict.ContainsKey(key))
-                dict.Add(key, new List<string>() { value });
+                dict.Add(key, new List<U>() { value });
 
             // don't add the value if it already exists in this list
             else if (dict[key].Contains(value))
