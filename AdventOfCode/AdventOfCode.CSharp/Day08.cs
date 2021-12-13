@@ -37,7 +37,7 @@ namespace AdventOfCode.CSharp
             Outputs  = split[1].Split(' ').Select(Common.Alphabetize).ToList();
 
             Debug.Assert(Patterns.Count == 10);
-            Debug.Assert(Outputs.Count   == 4);
+            Debug.Assert(Outputs.Count  == 4 );
         }
         
         /// <summary>
