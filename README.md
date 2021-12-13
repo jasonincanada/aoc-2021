@@ -6,6 +6,7 @@ Visit the Advent of Code sub-reddit for discussions and other participants' code
 
 | Day | Title                                                                  | Description                                  |
 | --- | ---------------------------------------------------------------------- | -------------------------------------------- |
+| 13  | [Transparent Origami](./AdventOfCode/AdventOfCode.CSharp/Day13.cs)     | Fold a paper of dots to reveal a code        |
 | 12  | [Passage Pathing](./AdventOfCode/AdventOfCode.CSharp/Day12.cs)         | Count all paths through a cave network       |
 | 11  | [Dumbo Octopus](./AdventOfCode/AdventOfCode.CSharp/Day11.cs)           | Energize a cavern of octopuses               |
 | 10  | [Syntax Scoring](./AdventOfCode/AdventOfCode.CSharp/Day10.cs)          | Analyse nested brackets and report errors    |
