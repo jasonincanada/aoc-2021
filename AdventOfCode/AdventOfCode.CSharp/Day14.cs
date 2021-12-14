@@ -130,36 +130,36 @@
     /// A square grid with labels from the list passed in during construction. Like a matrix
     /// but there's no operations defined except mutably updating a value at an index
     /// </summary>
-    /// <typeparam name="T"></typeparam>
-    /// <typeparam name="U"></typeparam>
-    class SquareGrid<T, U>
+    /// <typeparam name="TKey">The index type is a pair of TKeys</typeparam>
+    /// <typeparam name="TValue">The stored value type</typeparam>
+    class SquareGrid<TKey, TValue>
     {
-        Dictionary<(T, T), U> _grid;
-        readonly List<T> _keys;
+        Dictionary<(TKey, TKey), TValue> _grid;
+        readonly List<TKey> _keys;
 
-        public SquareGrid(IEnumerable<T> keys, U zero)
+        public SquareGrid(IEnumerable<TKey> keys, TValue zero)
         {
             _keys = keys.ToList();
-            _grid = new Dictionary<(T, T), U>();
+            _grid = new Dictionary<(TKey, TKey), TValue>();
 
             foreach (var row in _keys)
             foreach (var col in _keys)
                 _grid.Add((row, col), zero);
         }
 
-        public void Modify((T, T) pair, Func<U, U> modifier)
+        public void Modify((TKey, TKey) pair, Func<TValue, TValue> modifier)
         {
             _grid[pair] = modifier(_grid[pair]);
         }
 
-        public IEnumerable<(T, T)> Indices()
+        public IEnumerable<(TKey, TKey)> Indices()
         {
             foreach (var row in _keys)
             foreach (var col in _keys)
                 yield return (row, col);
         }
 
-        public U At((T, T) pair)
+        public TValue At((TKey, TKey) pair)
         {
             if (!_grid.ContainsKey(pair))
                 throw new IndexOutOfRangeException();
@@ -167,7 +167,7 @@
             return _grid[pair];
         }
 
-        public void Combine(SquareGrid<T, U> deltas, Func<U, U, U> modifier)
+        public void Combine(SquareGrid<TKey, TValue> deltas, Func<TValue, TValue, TValue> modifier)
         {
             foreach (var idx in Indices())
                 Modify(idx, x => modifier(x, deltas.At(idx)));
