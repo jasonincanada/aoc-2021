@@ -108,7 +108,7 @@
                 char newletter = _rules[pair];
                 long count = tally.At(pair);
 
-                // when we split CH into CBH, we're gaining two new pairs (CB and BH) but losing
+                // when we change CH into CBH, we're gaining two new pairs (CB and BH) but losing
                 // the original one that just got split apart (CH)
                 queued.Modify((left, newletter),  x => x + count);
                 queued.Modify((newletter, right), x => x + count);
