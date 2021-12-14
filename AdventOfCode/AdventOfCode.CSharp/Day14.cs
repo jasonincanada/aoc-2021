@@ -125,7 +125,9 @@
 
     /// <summary>
     /// A square grid with labels from the list passed in during construction. Like a matrix
-    /// but there's no operations defined except mutably updating a value at an index
+    /// but there's no operations defined except mutably updating a value at an index. Note
+    /// there's only one TKey param that covers both axes of the grid, since it's a square
+    /// grid and both axes are identical
     /// </summary>
     /// <typeparam name="TKey">The index type is a pair of TKeys</typeparam>
     /// <typeparam name="TValue">The stored value type</typeparam>
