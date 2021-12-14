@@ -31,8 +31,8 @@
             _rules = input
                 .Skip(2)
                 .Select(ToRule)
-                .ToDictionary(p => p.Item1,
-                              p => p.Item2);
+                .ToDictionary(p => p.Pair,
+                              p => p.Letter);
 
             // gather all the letters, which will form the sides of our grid
             _letters = _rules
@@ -41,7 +41,7 @@
                 .ToArray();
         }
 
-        ((char,char),char) ToRule(string line)
+        ((char,char) Pair, char Letter) ToRule(string line)
         {
             var split = line.Split(" -> ");
             return ((split[0][0], split[0][1]), split[1][0]);
@@ -106,8 +106,8 @@
                 if (tally.At(pair) == 0)
                     continue;
 
-                char left = pair.Item1;
-                char right = pair.Item2;
+                char left = pair.Left;
+                char right = pair.Right;
                 char newletter = _rules[pair];
                 long count = tally.At(pair);
 
@@ -152,11 +152,11 @@
             _grid[pair] = modifier(_grid[pair]);
         }
 
-        public IEnumerable<(TKey, TKey)> Indices()
+        public IEnumerable<(TKey Left, TKey Right)> Indices()
         {
-            foreach (var row in _keys)
-            foreach (var col in _keys)
-                yield return (row, col);
+            foreach (var left  in _keys)
+            foreach (var right in _keys)
+                yield return (left, right);
         }
 
         public TValue At((TKey, TKey) pair)
