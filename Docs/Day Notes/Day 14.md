@@ -6,7 +6,7 @@
 
 How far can we get evolving just the first two letters?  Can we do each pair separately and combine the results?  Seemingly not, even a pair gets only about 25 steps in:
 
-![[day-14 letter first pair evolution.png]]
+![[day-14 first pair evolution.png]]
 
 ## Memoization?
 
