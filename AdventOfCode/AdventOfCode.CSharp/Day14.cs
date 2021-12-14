@@ -61,11 +61,8 @@
             SquareGrid<char, long> pairs = new(_letters, 0);
 
             // count the number of each pair in the original template
-            for (int i = 0; i < _template.Length - 1; i++)
-            {
-                var pair = (_template[i], _template[i + 1]);
-                pairs.Modify(pair, x => x + 1);
-            }
+            foreach (var pair in _template.SlidingPairs())
+                pairs.Modify(pair, x => x + 1);            
 
             // if we only had the pair counts, how would we know which right-side characters
             // overlap which left side characters so we don't overcount them? i don't think we

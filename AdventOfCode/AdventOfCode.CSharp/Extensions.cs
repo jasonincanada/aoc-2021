@@ -81,5 +81,13 @@
             else
                 dict[key].Add(value);
         }
+
+        /// <summary>
+        /// Return every consecutive pair of elements from the passed IEnumerable&lt;<typeparamref name="T"/>&gt;
+        /// </summary>
+        public static IEnumerable<(T Left, T Right)> SlidingPairs<T>(this IEnumerable<T> list)
+        {
+            return list.Zip(list.Skip(1));
+        }
     }
 }
