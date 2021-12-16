@@ -270,7 +270,7 @@
             'D' => "1101",
             'E' => "1110",
             'F' => "1111",
-             _  => throw new ArgumentNullException($"hex {hex}")
+             _  => throw new ArgumentOutOfRangeException($"hex {hex}")
         };
     }
 
