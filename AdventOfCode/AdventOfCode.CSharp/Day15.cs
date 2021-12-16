@@ -52,8 +52,8 @@ namespace AdventOfCode.CSharp
         /// <returns>The computed risk level at this coordinate</returns>
         public int At(int row, int col)
         {
-            if (row > LastRow) throw new ArgumentOutOfRangeException("row");
-            if (col > LastCol) throw new ArgumentOutOfRangeException("col");
+            if (row >= LastRow) throw new ArgumentOutOfRangeException("row");
+            if (col >= LastCol) throw new ArgumentOutOfRangeException("col");
 
             int originalRow = row % _size;
             int originalCol = col % _size;
