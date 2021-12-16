@@ -66,6 +66,20 @@
         }
 
         /// <summary>
+        /// Return the product of the numbers in the passed IEnumerable&lt;long&gt;
+        /// </summary>
+        /// <param name="factors"></param>
+        public static long Product(this IEnumerable<long> factors)
+        {
+            long product = 1;
+
+            foreach (long factor in factors)
+                product *= factor;
+
+            return product;
+        }
+
+        /// <summary>
         /// Add a value to a dictionary of lists, only if the value is distinct within the
         /// list, creating a new singleton list at this key if the key is new
         /// </summary>

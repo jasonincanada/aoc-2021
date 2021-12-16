@@ -6,6 +6,7 @@ Visit the Advent of Code sub-reddit for discussions and other participants' code
 
 | Day | Title                                                                  | Description                                  |
 | --- | ---------------------------------------------------------------------- | -------------------------------------------- |
+| 16  | [Packet Decoder](./AdventOfCode/AdventOfCode.CSharp/Day16.cs)          | Decode a bit stream to packets and evaluate  |
 | 15  | [Chiton](./AdventOfCode/AdventOfCode.CSharp/Day15.cs)                  | Find the lowest-cost path through a grid     |
 | 14  | [Extended Polymerization](./AdventOfCode/AdventOfCode.CSharp/Day14.cs) | Evolve a very long polymer                   |
 | 13  | [Transparent Origami](./AdventOfCode/AdventOfCode.CSharp/Day13.cs)     | Fold a paper of dots to reveal a code        |
