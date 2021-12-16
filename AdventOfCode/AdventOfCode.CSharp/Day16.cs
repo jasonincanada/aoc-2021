@@ -16,12 +16,12 @@
 
     public class LiteralPacket : BasePacket
     {
-        public long LiteralValue { get; set; }
+        public long LiteralValue { get; private set; }
 
         /// <summary>
         /// Count of bits used to store the literal in the original bitstream
         /// </summary>
-        public int LiteralBits { get; set; }
+        public int LiteralBits { get; private set; }
 
         public LiteralPacket(int version, long val, int bits)
             : base(version)
