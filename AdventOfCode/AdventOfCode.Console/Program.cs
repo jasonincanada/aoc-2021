@@ -18,6 +18,7 @@ List<IAdventDay> days = new() {
     new Day14(Common.GetInput(14)),
     new Day15(Common.GetInput(15)),
     new Day16(Common.GetInput(16)),
+    new Day17(Common.GetInput(17)),
 };
 
 for (int day = 0; day < days.Count; day++)

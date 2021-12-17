@@ -6,6 +6,7 @@ Visit the Advent of Code sub-reddit for discussions and other participants' code
 
 | Day | Title                                                                  | Description                                  |
 | --- | ---------------------------------------------------------------------- | -------------------------------------------- |
+| 17  | [Trick Shot](./AdventOfCode/AdventOfCode.CSharp/Day17.cs)              | Fire probes and report hit counts            |
 | 16  | [Packet Decoder](./AdventOfCode/AdventOfCode.CSharp/Day16.cs)          | Decode a bit stream to packets and evaluate  |
 | 15  | [Chiton](./AdventOfCode/AdventOfCode.CSharp/Day15.cs)                  | Find the lowest-cost path through a grid     |
 | 14  | [Extended Polymerization](./AdventOfCode/AdventOfCode.CSharp/Day14.cs) | Evolve a very long polymer                   |
