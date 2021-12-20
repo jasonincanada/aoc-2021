@@ -6,6 +6,9 @@ Visit the Advent of Code sub-reddit for discussions and other participants' code
 
 | Day | Title                                                                  | Description                                  |
 | --- | ---------------------------------------------------------------------- | -------------------------------------------- |
+| 20  | [Trench Map](./AdventOfCode/AdventOfCode.CSharp/Day20.cs)              | Evolve a pixel map like a cellular automaton |
+| 19  | Beacon Scanner                                                         | Queued                                       |
+| 18  | Snailfish                                                              | Evolve a tree of snailfish numbers *wip*     |
 | 17  | [Trick Shot](./AdventOfCode/AdventOfCode.CSharp/Day17.cs)              | Fire probes and report hit counts            |
 | 16  | [Packet Decoder](./AdventOfCode/AdventOfCode.CSharp/Day16.cs)          | Decode a bit stream to packets and evaluate  |
 | 15  | [Chiton](./AdventOfCode/AdventOfCode.CSharp/Day15.cs)                  | Find the lowest-cost path through a grid     |
