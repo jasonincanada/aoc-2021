@@ -78,7 +78,7 @@
                     var neighbours = Neighbours(row, col);
 
                     List<int> scan = neighbours
-                        .Select(n => GetAt(n, step))
+                        .Select(n => GetAt(n))
                         .Select(n => n == '#' ? 1 : 0)  // get ready for FromBits()
                         .ToList();
 
@@ -91,8 +91,8 @@
                 // this is now the new image for the next step
                 image = next;
 
-                // embed GetAt within this function so it can see the local map, image
-                char GetAt(Coord coord, int step)
+                // embed GetAt within this function so it can see the locals image and step
+                char GetAt(Coord coord)
                 {
                     if (image.ContainsKey(coord))
                         return image[coord];
