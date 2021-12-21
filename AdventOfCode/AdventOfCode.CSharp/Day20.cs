@@ -47,7 +47,7 @@
         public long Part1() => Process(steps: 2);
         public long Part2() => Process(steps: 50);
 
-        public long Process(int steps)
+        long Process(int steps)
         {
             var image = new Dictionary<Coord, char>(_image);
             var final = Evolve(image, steps);
