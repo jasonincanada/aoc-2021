@@ -6,6 +6,7 @@ Visit the Advent of Code sub-reddit for discussions and other participants' code
 
 | Day | Title                                                                  | Description                                  |
 | --- | ---------------------------------------------------------------------- | -------------------------------------------- |
+| 21  | [Dirac Dice](./AdventOfCode/AdventOfCode.CSharp/Day21.cs)              | Simulate a dice game (part 2 *wip*)          |
 | 20  | [Trench Map](./AdventOfCode/AdventOfCode.CSharp/Day20.cs)              | Evolve a pixel map like a cellular automaton |
 | 19  | Beacon Scanner                                                         | Queued                                       |
 | 18  | Snailfish                                                              | Evolve a tree of snailfish numbers *wip*     |
